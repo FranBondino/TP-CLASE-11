@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="normalize.css">
+        <link rel="stylesheet"  href="queries.css">
+        <script src="validation.js"></script>
+        <title> Formulario </title>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="container">
+                    <div class="nav-header">
+                        <h2><span>Formulario</span></h2>
+                        <button class="nav-toggle" id="navToggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="form-container">
+                <form id="form-susc">
+                    <div class="title">Registro</div>
+                    <div class="user-details">
+                        <div class="input-box">
+                            <div class="nombre-ap">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" name="nombre" placeholder="Ingrese su nombre" id="nombreInput">
+                                <p id="nameError" class="hiddenError">Debe poseer como minimo tres letras</p>
+                                <label for="apellido">Apellido</label>
+                                <input type="text" name="apellido" placeholder="Ingrese su apellido" id="apellidoInput">
+                                <p id="surNameError" class="hiddenError">Debe poseer como minimo tres letras</p>
+                            </div>
+                            <div class="mail-edad">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" placeholder="Ingrese su email" id="mailInput"">
+                                <p id="emailError" class="hiddenError">Debe poseer formato de mail</p>
+                                <label for="edad">Edad</label>
+                                <input type="text" name="edad" placeholder="Ingrese su edad" id="edadInput">
+                                <p id="ageError" class="hiddenError">Debe ser un número entero mayor a 0 y menor a 100</p>
+                            </div>
+                        </div>
+                        <div class="multiple-choice">
+                            <fieldset class="gender-fieldset">
+                                <legend>Genero</legend>
+                                <ul>
+                                    <li>
+                                        <input type="radio" id="male" value="hombre" name="gender">
+                                        <label for="male">Hombre</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="female" value="mujer" name="gender">
+                                        <label for="female">Mujer</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="other" value="otro" name="gender">
+                                        <label for="other">Otro</label>
+                                    </li>
+                                </ul>
+                                <p id="radioError" class="hiddenError">Debe seleccionar una opcion</p>
+                            </fieldset>
+                            <fieldset class="interest-fieldset">
+                                <legend>Intereses</legend>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" value="deportes" name="tema" id="sports">
+                                        <label for="sports">Deportes</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="musica" name="tema" id="music">
+                                        <label for="music">Musica</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="juegos" name="tema" id="games">
+                                        <label for="games">Juegos</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="tecnologia" name="tema" id="technology">
+                                        <label for="technology">Tecnologia</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="otros" name="other" id="other">
+                                        <label for="other">Otros</label> 
+                                    </li>
+                                </ul>
+                                <p id="checkError" class="hiddenError">Debe seleccionar al menos una opcion</p>
+                            </fieldset>
+                            <div class="cascade-menu">
+                                <span class="cascade-title">Seleccione su pais</span>
+                                <select name="countries" id="countries">
+                                    <option value="argentina">Argentina</option>
+                                    <option value="chile">Chile</option>
+                                    <option value="brasil">Brasil</option>
+                                    <option value="uruguay">Uruguay</option>
+                                </select>
+                                <p id="countryError" class="hiddenError">Debe seleccionar un pais</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-box">
+                        <label for="comments"> Comentarios </label>
+                        <textarea class="comment-input" type="text" id="comentarios" name="comentarios" placeholder="Escriba sus comentarios ... (Opcional)"></textarea>
+                    </div>
+                    <div class="button">
+                        <input type="submit" name="submit" value="Enviar" id="submit">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <p>Parcial 1 LPPA</p>
+        </footer>
+    </body>   
+</html> 
